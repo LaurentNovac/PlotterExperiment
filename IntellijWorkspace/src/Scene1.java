@@ -2,15 +2,11 @@ import processing.core.PApplet;
 
 public class Scene1 implements Scene {
     @Override
-    public void draw(Renderer R, float xStart, float yStart, float xMin, float yMin, float xMax, float yMax) {
+    public void draw(Renderer R,float xMin, float yMin, float xMax, float yMax) {
         PApplet p5 = R.getP5();
 
-        float xPos = xStart;
-        float yPos = yStart;
-
-        R.raisePen();
-
-        R.moveTo(xPos,yPos);
+        float xPos = (xMax-xMin)/2.0f;
+        float yPos = (yMax-yMin)/2.0f;
 
         for (int x = 0; x < 10; x++) {
             for (int y = 0; y < 10; y++) {

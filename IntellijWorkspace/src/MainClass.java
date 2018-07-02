@@ -815,7 +815,9 @@ public class MainClass extends PApplet {
     public void setup() {
         R = new Renderer(this);
         scenes = new ArrayList<Scene>();
-        scenes.add(new Scene1());
+        //scenes.add(new Scene1());
+        //scenes.add(new Scene2());
+        scenes.add(new Scene3());
         //pixelDensity(2);
 
         Ani.init(this); // Initialize animation library
@@ -1105,7 +1107,7 @@ public class MainClass extends PApplet {
         if ((mouseX >= MousePaperLeft) && (mouseX <= MousePaperRight) && (mouseY >= MousePaperTop) && (mouseY <= MousePaperBottom)) {
 
             for(Scene s:scenes){
-                s.draw(R,mouseX, mouseY, MousePaperLeft, MousePaperTop, MousePaperRight, MousePaperBottom);
+                s.draw(R, MousePaperLeft, MousePaperTop, MousePaperRight, MousePaperBottom);
             }
 
             doHighlightRedraw = true;

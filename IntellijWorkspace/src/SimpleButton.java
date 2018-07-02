@@ -18,12 +18,6 @@ public class SimpleButton {
     public int displayColor;
     public int highlightColor;
 
-
-    SimpleButton(PApplet p5, String label, int posX, int posY) {
-        this.p5 = p5;
-        initButton(label, posX, posY, (PFont) null, 0, p5.color(255, 255, 255, 128), p5.color(255));
-    }
-
     SimpleButton(PApplet p5, String label, int posX, int posY,
                  PFont font, int fontSize,
                  int displayColor, int highlightColor) {
